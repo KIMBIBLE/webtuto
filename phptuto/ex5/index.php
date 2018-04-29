@@ -8,9 +8,14 @@
         <h1><a href="index.php">WEB</a></h1>
         <ol>
             <?php
-                $base_dir = "./data/"
-                $list = scandir("base_dir");
-                var_dump($list);
+                $base_dir = "./data";
+                $list = scandir("$base_dir");
+                //var_dump($list);
+
+                $cnt=count($list);
+                for($i=2; $i<$cnt; $i++){
+                    echo "<li><a href=\"index.php?id=$list[$i]\">$list[$i]</a></li>\n";
+                }
             ?>
         </ol>
         <h2>
