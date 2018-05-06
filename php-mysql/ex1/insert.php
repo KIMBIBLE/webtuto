@@ -1,6 +1,7 @@
 <?php
 $mysqli = mysqli_connect("localhost", "root", "111111", "opentutorials");
-mysqli_query($mysqli, "
+
+$sql = "
     INSERT INTO topic
         (title, description, created)
         VALUE(
@@ -9,4 +10,5 @@ mysqli_query($mysqli, "
             NOW()
             )
 ");
+mysqli_query($mysqli, $sql);
 ?>
